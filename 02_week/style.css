@@ -1,0 +1,56 @@
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #101010;
+
+}
+
+.inner_header{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    background-color: chartreuse;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.logo{
+    height: 100%;
+    justify-content: left;
+}
+.logo h1 {
+    color: white;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+
+}
+
+.logo h1 span {
+    font-weight: 800;
+
+}
+
+.navigation {
+    height: 100%;
+    justify-content: right;
+}
+
+.navigation a {
+    text-decoration: none;
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
