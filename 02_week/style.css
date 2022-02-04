@@ -91,6 +91,7 @@
 }
 
 .content img {
+    border-radius: 35%;
     height: 350px;
     width: 350px;
 }
