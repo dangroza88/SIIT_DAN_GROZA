@@ -72,6 +72,10 @@
     align-items: center
 }
 
+.article {
+    padding: 3px;
+}
+
 .content img {
     border-radius: 35%;
     height: 350px;
