@@ -7,15 +7,8 @@
      background-attachment: fixed;
      background-size: cover;
      background-color: #464646;
+     font-family: 'Montserrat', sans-serif;
  }
-
-.container1 {
-}
-
-.container3 {   
-}
-.container2 {   
-}
 
 .header{
     width: 100%;
@@ -74,18 +67,11 @@
 
 .content {
     display: flex;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
+    flex-direction: row;
+    flex-wrap: inherit;
+    align-items: center
 }
 
-.article {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.art2 img {
-    flex-direction: row-reverse;
-} 
 .content img {
     border-radius: 35%;
     height: 350px;
@@ -95,7 +81,7 @@
 .content h1 {
     padding: 30px;
     color: black;
-    text-shadow: 1px 1px 1px whitesmoke;
+    text-shadow: 1px 1px 1px white
     
 }
 
@@ -103,10 +89,25 @@
     font-size: 25px;
     color: #ffffff;
     text-shadow: 2px 2px 2px #000000;
+    
 }
 
+.input {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-shadow: 2px 2px 2px white;
+}
 
-
+.input input {
+    height:200px;
+    width: 400px;
+    font-size:14pt;
+}
+}
 
 footer{
     text-align: center;
@@ -114,3 +115,23 @@ footer{
     color: white;
     padding: 0.5rem 0;
 }
+
+.contact-form{
+    padding: 20px;
+    width: 550px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+  
+  textarea{
+    width: 300px;
+    height: 200px;
+    display: block;
+  }
+  
+  .form-control{
+    margin-bottom: 20px; */
+    /* background-color: yellow;
+  }
