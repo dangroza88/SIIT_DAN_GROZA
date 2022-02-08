@@ -68,12 +68,13 @@
 .content {
     display: flex;
     flex-direction: row;
-    flex-wrap: inherit;
-    align-items: center
+    flex-wrap:wrap;
+    align-items: center;
 }
 
 .article {
-    padding: 3px;
+    padding: 10px;
+    
 }
 
 .content img {
