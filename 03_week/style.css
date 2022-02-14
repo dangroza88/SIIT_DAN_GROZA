@@ -1,6 +1,11 @@
 * {
     margin: 0px;
     box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,6 +32,7 @@ header span {
     font-size: 50px;
     font-weight: bold;
 }
+
 header h1 {
     font-size: 30px;
 }
@@ -53,6 +59,7 @@ main {
     justify-content: space-around;
     align-items: center;
     padding: 100px;
+    width: 70%;
     
 }
 
@@ -80,22 +87,41 @@ main {
 
 }
 main img {
-    height: 300px;
-    width: 450px;
+    height: 250px;
+    width: 300px;
     border-radius: 25%;
 }
 
 main h1,h2,h3 {
-    font-size: 65px;
+    font-size: 45px;
     color: blanchedalmond;
     text-decoration: none;
 }
 
 main p {
-    font-size: 40px;
+    font-size: 35px;
     color: aliceblue;
 }
 
+#myBtn {
+    position: fixed;
+    bottom: 40px;
+    float: right;
+    right: 18.5%;
+    left: 77.25%;
+    font-size: 30px;
+    border-color: rgba(85, 85, 85, 0.2);
+    /* background-color: rgb(100,100,100); */
+    padding: .5px;
+    border-radius: 4px;
+    text-decoration: none;
+
+}
+
+#myBtn:hover {
+    background-color: #05262a;
+}
+  
 
 @media only screen and (max-width: 600px) {
     nav {
