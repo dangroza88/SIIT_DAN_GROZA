@@ -59,7 +59,7 @@ main {
     justify-content: space-around;
     align-items: center;
     padding: 100px;
-    width: 70%;
+    width: 85%;
     
 }
 
@@ -106,22 +106,13 @@ main p {
 #myBtn {
     position: fixed;
     bottom: 40px;
-    float: right;
-    right: 18.5%;
     left: 77.25%;
     font-size: 30px;
     border-color: rgba(85, 85, 85, 0.2);
-    /* background-color: rgb(100,100,100); */
     padding: .5px;
     border-radius: 4px;
-    text-decoration: none;
 
 }
-
-#myBtn:hover {
-    background-color: #05262a;
-}
-  
 
 @media only screen and (max-width: 600px) {
     nav {
