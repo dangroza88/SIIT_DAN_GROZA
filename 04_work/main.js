@@ -77,3 +77,17 @@ function countAndcompareStrings(a, b){
 
 console.log(countAndcompareStrings("AA", "BB"));
 console.log(countAndcompareStrings("AA", "BBC"));
+
+// Say "Hello" Say "Bye"
+
+function helloBye(name, num){
+    if(num === 1){
+        return "Hello " + name;
+    } else {
+        return "Bye " + name;
+    }
+
+}
+
+console.log(helloBye("alon", 1));
+console.log(helloBye("alon", 0));
