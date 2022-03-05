@@ -13,7 +13,7 @@ for (i = 0; i < array.length; i++) {
 //   2.  display in the console the odd numbers from 1 to 20
 
 for (i = 0; i < array.length; i++) {
-    if (array[i] > 20 && array[i] % 2 != 0) {
+    if (array[i] < 20 && array[i] % 2 != 0) {
       console.log(array[i]);
     }
   }
