@@ -1,3 +1,26 @@
+// # Javascript Control Structures
+var array = [ 1, 2, 3, 4, 56, 232, 45, 12, 4, 6, 8, 8,8, 1, 1];
+
+// ## Display in browser console
+// 1.  display in the console the numbers from 1 to 20
+
+for (i = 0; i < array.length; i++) {
+    if (array[i] > 0 && array[i] < 21) {
+      console.log(array[i]);
+    }
+  }
+
+//   2.  display in the console the odd numbers from 1 to 20
+
+for (i = 0; i < array.length; i++) {
+    if (array[i] > 20 && array[i] % 2 != 0) {
+      console.log(array[i]);
+    }
+  }
+
+
+// ---------------------------------------------------------------------------------------
+//  Edabit homework (Optional)
 // Create a function that takes two numbers as arguments and returns their sum.
 
 function sum(a, b){
