@@ -18,6 +18,70 @@ for (i = 0; i < array.length; i++) {
     }
   }
 
+// 3.  compute the sum of the elements of an array and display it in the console
+
+var sumArr = 0;
+
+for(i = 0; i < array.length; i++){
+    sumArr = sumArr + array[i];
+}
+
+console.log(sumArr);
+
+// 4.  compute the maximum of the elements of an array and display it in the console
+
+var maxNr = array[0];
+
+for (i = 0; i < array.length; i++) {
+  if (array[i] > maxNr) {
+    maxNr = array[i];
+  }
+}
+console.log(maxNr);
+
+//5.  compute how many times a certain element appears in an array - tips: use object, var element = 2
+
+
+result = { };
+for(var i = 0; i < array.length; ++i) {
+    if(!result[array[i]])
+        result[array[i]] = 0;
+    ++result[array[i]];
+}
+console.log(result);
+
+// 6.  Using nested control structures (doua for + if) for generate the following pattern
+           
+0 1 0 1
+
+1 0 1 0
+
+0 1 0 1
+
+1 0 1 0
+
+function pattern(a, b) {
+    var arr = [];
+    for (i = 0; i < a; i++) {
+      for (j = 0; j < b; j++) {
+        arr[i] = [];
+      }
+    }
+  
+    for (i = 0; i < a; i++) {
+      for (j = 0; j < b; j++) {
+        if (i % 2 == 0 && j % 2 == 0) {
+          arr[i][j] = 0;
+        } else if (i % 2 == 0 || j % 2 == 0) {
+          arr[i][j] = 1;
+        } else {
+          arr[i][j] = 0;
+        }
+      }
+    }
+    return arr;
+  }
+  console.log(pattern(8,8));
 
 // ---------------------------------------------------------------------------------------
 //  Edabit homework (Optional)
