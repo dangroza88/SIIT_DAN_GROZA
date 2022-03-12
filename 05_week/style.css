@@ -39,4 +39,10 @@ button:hover{
     background-color: #444;
 }
 
+/* .comment {
+    border: 10px solid red;
+} */
 
+.imgAndEmail {
+    display: flex;
+}
