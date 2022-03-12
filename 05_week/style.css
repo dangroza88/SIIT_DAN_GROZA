@@ -24,7 +24,7 @@
     color: #777;
 }
 
-.form button{
+.add-delete-comment{
     margin: 10px 0;
     border: none;
     background-color: rgb(104, 95, 95);
@@ -46,3 +46,7 @@ button:hover{
 .imgAndEmail {
     display: flex;
 }
+
+/* #comment-box {
+    visibility: hidden;
+} */

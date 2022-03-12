@@ -2,13 +2,13 @@ console.log("js loaded");
 
 const text = document.querySelector(".text-comment");
 const commentBox = document.getElementById("comment-box");
-const addBtn = document.querySelector(".add-comment");
+const addBtn = document.getElementById("addBtn");
 
 let i = 0;
 
-addBtn.addEventListener('click', function() {
+addBtn.addEventListener('click', function () {
     debugger
-    if(text.value === ""){
+    if (text.value === "") {
         alert("Please add comment")
         return
     }
@@ -16,15 +16,17 @@ addBtn.addEventListener('click', function() {
     const createDivforComment = document.createElement("div");
     const createDivforImgandEmail = document.createElement("div");
     const createDivforTextComment = document.createElement("div");
-    const createimgProfile =  document.createElement('img');
-    const crateEmail = document.createElement('h2');
-    const cretateParagraph = document.createElement('p');
+    const createimgProfile = document.createElement('img');
+    const createEmail = document.createElement('h2');
+    const createParagraph = document.createElement('p');
+    const createDeleteBtn = document.createElement("button");
 
-    // createDivforComment.classList.add("");
-    createDivforComment.setAttribute('id', + i);
+    commentBox.classList.add("container");
+
+    createDivforComment.setAttribute('id', "item" + i);
     commentBox.appendChild(createDivforComment);
 
-    createDivforImgandEmail.classList.add(".imgAndEmail");
+    createDivforImgandEmail.classList.add("imgAndEmail");
     createDivforComment.appendChild(createDivforImgandEmail);
 
 
@@ -33,21 +35,25 @@ addBtn.addEventListener('click', function() {
     createimgProfile.setAttribute("width", "60px");
     createDivforImgandEmail.appendChild(createimgProfile);
 
-    crateEmail.innerHTML = "emailUser@stuff.com";
-    createDivforImgandEmail.appendChild(crateEmail);
+    createEmail.innerHTML = "emailUser@stuff.com";
+    createDivforImgandEmail.appendChild(createEmail);
 
 
     commentBox.appendChild(createDivforTextComment);
-    cretateParagraph.textContent = text.value;
-    createDivforTextComment.appendChild(cretateParagraph);
+    createParagraph.textContent = text.value;
+    createDivforTextComment.appendChild(createParagraph);
 
-
-
-
+    createDeleteBtn.innerHTML = "Delete Comment";
+    createDeleteBtn.setAttribute('id', i);
+    createDeleteBtn.classList.add("add-delete-comment");
+    createDivforTextComment.appendChild(createDeleteBtn);
 
 })
 
-++i 
+++i;
+
+
+
 
 
 
