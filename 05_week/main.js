@@ -1,8 +1,8 @@
 console.log("js loaded");
 
-const text = document.querySelector(".text-comment");
-const commentBox = document.getElementById("comment-box");
-const addBtn = document.getElementById("addBtn");
+var text = document.querySelector(".text-comment");
+var commentBox = document.getElementById("comment-box");
+var addBtn = document.getElementById("addBtn");
 
 let i = 0;
 
@@ -13,13 +13,13 @@ addBtn.addEventListener('click', function () {
         return
     }
 
-    const createDivforComment = document.createElement("div");
-    const createDivforImgandEmail = document.createElement("div");
-    const createDivforTextComment = document.createElement("div");
-    const createimgProfile = document.createElement('img');
-    const createEmail = document.createElement('h2');
-    const createParagraph = document.createElement('p');
-    const createDeleteBtn = document.createElement("button");
+    var createDivforComment = document.createElement("div");
+    var createDivforImgandEmail = document.createElement("div");
+    var createDivforTextComment = document.createElement("div");
+    var createimgProfile = document.createElement('img');
+    var createEmail = document.createElement('h2');
+    var createParagraph = document.createElement('p');
+    var createDeleteBtn = document.createElement("button");
 
     commentBox.classList.add("container");
 
@@ -30,12 +30,12 @@ addBtn.addEventListener('click', function () {
     createDivforComment.appendChild(createDivforImgandEmail);
 
 
-    createimgProfile.setAttribute("src", "https://png.pngtree.com/png-clipart/20191120/original/pngtree-outline-user-icon-png-image_5045523.jpg");
+    createimgProfile.setAttribute("src", "https://easyappicon.com/image/favicon/ms-icon-310x310.png");
     createimgProfile.setAttribute("height", "60px");
     createimgProfile.setAttribute("width", "60px");
     createDivforImgandEmail.appendChild(createimgProfile);
 
-    createEmail.innerHTML = "emailUser@stuff.com";
+    createEmail.innerHTML = " emailUser@stuff.com";
     createDivforImgandEmail.appendChild(createEmail);
 
 
@@ -44,13 +44,43 @@ addBtn.addEventListener('click', function () {
     createDivforTextComment.appendChild(createParagraph);
 
     createDeleteBtn.innerHTML = "Delete Comment";
-    createDeleteBtn.setAttribute('id', i);
+    createDeleteBtn.setAttribute('id', "item" + i);
     createDeleteBtn.classList.add("add-delete-comment");
     createDivforTextComment.appendChild(createDeleteBtn);
 
+    createDeleteBtn.addEventListener('click', function(){
+        let key  = this.getAttribute('id');
+        document.getElementById('item' + key).remove();
+        i--;
+    })
+    
 })
 
 ++i;
+
+
+
+
+
+
+
+
+
+
+
+// addBtn.addEventListener('click', function() {
+//     var div = document.createElement('div');
+//     div.id = 'container';
+//     div.innerHTML = 'Hi there!';
+//     div.className = 'border pad';
+ 
+//     document.body.appendChild(div);
+// }, false);
+
+
+
+
+
 
 
 
