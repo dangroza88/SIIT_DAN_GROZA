@@ -48,14 +48,16 @@ addBtn.addEventListener('click', function () {
     createDeleteBtn.classList.add("add-delete-comment");
     createDivforTextComment.appendChild(createDeleteBtn);
 
+    text.value = "";
+
     createDeleteBtn.addEventListener('click', function(){
         debugger;
         var key  = this.getAttribute('id');
         document.getElementById(key).remove();
         
         
-        var isEmpty = document.getElementById('comment-box').innerHTML === "";
-        if (isEmpty == ""){
+        var isEmpty = document.getElementById('comment-box');
+        if (isEmpty.innerHTML === "\n    "){
             commentBox.classList.remove("container");
         }
     })
