@@ -7,7 +7,7 @@ var addBtn = document.getElementById("addBtn");
 let i = 0;
 
 addBtn.addEventListener('click', function () {
-    debugger
+    // debugger
     if (text.value === "") {
         alert("Please add comment")
         return
@@ -39,7 +39,7 @@ addBtn.addEventListener('click', function () {
     createDivforImgandEmail.appendChild(createEmail);
 
 
-    commentBox.appendChild(createDivforTextComment);
+    createDivforComment.appendChild(createDivforTextComment);
     createParagraph.textContent = text.value;
     createDivforTextComment.appendChild(createParagraph);
 
@@ -49,14 +49,20 @@ addBtn.addEventListener('click', function () {
     createDivforTextComment.appendChild(createDeleteBtn);
 
     createDeleteBtn.addEventListener('click', function(){
-        let key  = this.getAttribute('id');
-        document.getElementById('item' + key).remove();
-        i--;
+        debugger;
+        var key  = this.getAttribute('id');
+        document.getElementById(key).remove();
+        
+        
+        var isEmpty = document.getElementById('comment-box').innerHTML === "";
+        if (isEmpty == ""){
+            commentBox.classList.remove("container");
+        }
     })
     
+    ++i;
 })
 
-++i;
 
 
 
