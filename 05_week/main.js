@@ -51,7 +51,7 @@ addBtn.addEventListener('click', function () {
     text.value = "";
 
     createDeleteBtn.addEventListener('click', function(){
-        debugger;
+        // debugger;
         var key  = this.getAttribute('id');
         document.getElementById(key).remove();
         
