@@ -25,8 +25,9 @@
     height: 80px;
     /* border: 1px solid black;   */
     position: relative;
-    background-image: url("https://mpng.subpng.com/20171216/e17/bomb-png-5a3580138049f9.9559720615134556355255.jpg");
+    background-image: url("https://www.pinclipart.com/picdir/middle/523-5230738_boom-explosion-png-transparent-explosion-clipart.png");
     background-size: 80px 80px;
+    border-radius: 50%;
   }
 
   .lives-container {
@@ -35,4 +36,12 @@
 
   .hidden {
     visibility: hidden;
+  }
+
+  .resque {
+    width: 50px;
+    height: 50px;
+    background-image: url("https://png.pngtree.com/png-vector/20190215/ourlarge/pngtree-vector-helicopter-icon-png-image_515929.jpg");
+    background-size: 50px 50px;
+    position: relative;
   }

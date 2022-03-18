@@ -51,7 +51,6 @@ var obsNum = setInterval(function () {
   obsDiv.classList.add("obs", "hidden");
   obsDiv.setAttribute("id", "obs" + i)
   obsDiv.setAttribute("style", "top: " + obstaco.top + "px; left: " + obstaco.left + "px;");
-  // obsDiv.setAttribute("style", "top: 15px; left: " + obstaco.left + "px;");
   console.log(obstaco);
   i++;
   if (i >= 3) {
