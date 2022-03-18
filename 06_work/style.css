@@ -4,10 +4,11 @@
     border: 1px solid black;
   }
   .player {
-    width: 30px;
-    height: 30px;
-    /* background-image: url("https://pngset.com/images/super-mario-run-announced-for-ios-new-super-mario-bros-new-super-mario-bros-person-human-transparent-png-2754054.png"); */
-    background-color: red;
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.pngfind.com/pngs/m/680-6807590_world-war-ii-the-national-wwii-museum-ww2.png");
+    /* background-color: red; */
+    background-size: 50px 50px;
     position: relative;
   }
   
@@ -20,10 +21,12 @@
   }
 
   .obs{
-    width: 70px;
-    height: 70px;
-    border: 1px solid black;  
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid black;   */
     position: relative;
+    background-image: url("https://mpng.subpng.com/20171216/e17/bomb-png-5a3580138049f9.9559720615134556355255.jpg");
+    background-size: 80px 80px;
   }
 
   .lives-container {

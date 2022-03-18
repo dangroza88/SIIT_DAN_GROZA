@@ -1,16 +1,14 @@
 
-var lives = 3;
+// var lives = 3;
 var playGround = document.querySelector(".game-container");
-
-
-
-let player = document.querySelector(".player")
+let player = document.querySelector(".player");
+var deleteLive = document.querySelector(".lives-container");
 
 document.addEventListener("keydown", function (event) {
   // console.log("event= ", event)
   if (event.code === "ArrowDown") {
     let oldTop = parseInt(player.style.top)
-    if (oldTop < 370) {
+    if (oldTop < 350) {
       player.style.top = `${oldTop + 10}px`
     }
 
@@ -25,7 +23,7 @@ document.addEventListener("keydown", function (event) {
 
   if (event.code === "ArrowRight") {
     let oldLeft = parseInt(player.style.left)
-    if (oldLeft < 370) {
+    if (oldLeft < 350) {
       player.style.left = `${oldLeft + 10}px`
     }
   }
@@ -37,7 +35,7 @@ document.addEventListener("keydown", function (event) {
     }
   }
 
-  
+
 });
 
 
@@ -46,23 +44,23 @@ var obsNum = setInterval(function () {
   // console.log(event);
   var obstaco = {
     left: parseInt(Math.random() * 330),
-    // top: parseInt(Math.random() * 400)
+    top: parseInt(Math.random() * 40)
   }
   var obsDiv = document.createElement("div");
   playGround.appendChild(obsDiv);
-  obsDiv.classList.add("obs");
+  obsDiv.classList.add("obs", "hidden");
   obsDiv.setAttribute("id", "obs" + i)
-  // obsDiv.setAttribute("style", "top: " + obstaco.top + "px; left: " + obstaco.left + "px;");
-  obsDiv.setAttribute("style", "top: 10px; left: " + obstaco.left + "px;");
+  obsDiv.setAttribute("style", "top: " + obstaco.top + "px; left: " + obstaco.left + "px;");
+  // obsDiv.setAttribute("style", "top: 15px; left: " + obstaco.left + "px;");
   console.log(obstaco);
   i++;
-  if (i >= 5) {
+  if (i >= 3) {
     clearInterval(obsNum);
+    player.classList.remove("hidden");
   }
 }, 1000);
 
-
-function overlap(){
+document.addEventListener("keydown", function overlap() {
   let rect1 = player.getBoundingClientRect();
 
   let obs0 = document.getElementById("obs0")
@@ -74,51 +72,52 @@ function overlap(){
   let obs2 = document.getElementById("obs2")
   let rect4 = obs2.getBoundingClientRect();
 
-  let obs3 = document.getElementById("obs3")
-  let rect5 = obs3.getBoundingClientRect();
+  // let obsObject = {rect2, rect3, rect4};
+  // var obsObjectKeys = Object.keys(obsObject);
+  // console.log(obsObject);
+  // console.log(obsObjectKeys);
 
-  let obs4 = document.getElementById("obs4")
-  let rect6 = obs4.getBoundingClientRect();
-
-  let obsObject = {rect2, rect3, rect4, rect5, rect6};
-  var obsObjectKeys = Object.keys(obsObject);
-  console.log(obsObject);
-  console.log(obsObjectKeys);
- 
-  debugger;
-  var overlap = !(rect1.right < rect2.left ||
+  // debugger;
+  var overlap1 = !(rect1.right < rect2.left ||
     rect1.left > rect2.right ||
     rect1.bottom < rect2.top ||
     rect1.top > rect2.bottom)
-    console.log(overlap);
+  console.log("Hit, obs 1" + overlap1);
 
-}
+  var overlap2 = !(rect1.right < rect3.left ||
+    rect1.left > rect3.right ||
+    rect1.bottom < rect3.top ||
+    rect1.top > rect3.bottom)
+  console.log("Hit, obs 2" + overlap2);
 
-// document.addEventListener("keydown", function (event){
-//   console.log(event);
-//   var obstaco = {
-//     left: parseInt(Math.random() * 370),
-//     top: parseInt(Math.random() * 400)
-//   }
-//   var obsDiv = document.createElement("div");
-//   playGround.appendChild(obsDiv);
-//   obsDiv.classList.add("obs"); 
-//   // obsDiv.setAttribute("style", "top: " + obstaco.top + "px; left: " + obstaco.left + "px;");
-//   obsDiv.setAttribute("style", "top: 10px; left: " + obstaco.left + "px;");
-//   console.log(obstaco);
-// });
+  var overlap3 = !(rect1.right < rect4.left ||
+    rect1.left > rect4.right ||
+    rect1.bottom < rect4.top ||
+    rect1.top > rect4.bottom)
+  console.log("Hit, obs 3" + overlap3);
 
-
-
-
-
-function del() {
-  debugger
-  var deleteLive = document.querySelector(".lives-container");
-
-  deleteLive.removeChild(deleteLive.firstChild);
-
-}
+  if (overlap1 == true) {
+    obs0.classList.remove("hidden");
+    deleteLive.removeChild(deleteLive.firstChild);
+  }
+  if (overlap2 == true) {
+    obs1.classList.remove("hidden");
+    deleteLive.removeChild(deleteLive.firstChild);
+  }
+  if (overlap3 == true) {
+    obs2.classList.remove("hidden");
+    deleteLive.removeChild(deleteLive.firstChild);
+  }
+  if (deleteLive.childElementCount == 0) {
+    player.remove();
+    alert("Game over");
+  }
+  if (rect1.x == 359 && rect1.y == 548.875) {
+    alert("You made it !!!");
+    player.remove();
+  }
+  console.log(rect1.x + "dd" + rect1.y);
+});
 
 
 
