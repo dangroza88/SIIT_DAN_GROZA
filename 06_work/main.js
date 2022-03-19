@@ -111,7 +111,7 @@ document.addEventListener("keydown", function overlap() {
     player.remove();
     alert("Game over");
   }
-  if (rect1.x == 359 && rect1.y == 548.875) {
+  if (rect1.x == 359 && rect1.y == 565.875) {
     alert("You made it !!!");
     player.remove();
   }
