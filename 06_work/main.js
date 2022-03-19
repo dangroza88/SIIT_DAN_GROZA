@@ -2,7 +2,7 @@
 // var lives = 3;
 var playGround = document.querySelector(".game-container");
 let player = document.querySelector(".player");
-var deleteLive = document.querySelector(".lives-container");
+var deleteLife = document.querySelector(".life-container");
 
 document.addEventListener("keydown", function (event) {
   // console.log("event= ", event)
@@ -81,33 +81,33 @@ document.addEventListener("keydown", function overlap() {
     rect1.left > rect2.right ||
     rect1.bottom < rect2.top ||
     rect1.top > rect2.bottom)
-  console.log("Hit, obs 1" + overlap1);
+  console.log("Hit, obs 1 " + overlap1);
 
   var overlap2 = !(rect1.right < rect3.left ||
     rect1.left > rect3.right ||
     rect1.bottom < rect3.top ||
     rect1.top > rect3.bottom)
-  console.log("Hit, obs 2" + overlap2);
+  console.log("Hit, obs 2 " + overlap2);
 
   var overlap3 = !(rect1.right < rect4.left ||
     rect1.left > rect4.right ||
     rect1.bottom < rect4.top ||
     rect1.top > rect4.bottom)
-  console.log("Hit, obs 3" + overlap3);
+  console.log("Hit, obs 3 " + overlap3);
 
   if (overlap1 == true) {
     obs0.classList.remove("hidden");
-    deleteLive.removeChild(deleteLive.firstChild);
+    deleteLife.removeChild(deleteLife.firstChild);
   }
   if (overlap2 == true) {
     obs1.classList.remove("hidden");
-    deleteLive.removeChild(deleteLive.firstChild);
+    deleteLife.removeChild(deleteLife.firstChild);
   }
   if (overlap3 == true) {
     obs2.classList.remove("hidden");
-    deleteLive.removeChild(deleteLive.firstChild);
+    deleteLife.removeChild(deleteLife.firstChild);
   }
-  if (deleteLive.childElementCount == 0) {
+  if (deleteLife.childElementCount == 0) {
     player.remove();
     alert("Game over");
   }
@@ -115,7 +115,7 @@ document.addEventListener("keydown", function overlap() {
     alert("You made it !!!");
     player.remove();
   }
-  console.log(rect1.x + "dd" + rect1.y);
+  console.log(rect1.x + " axis " + rect1.y);
 });
 
 
