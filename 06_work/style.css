@@ -1,0 +1,51 @@
+body{
+  background-color: #f7f7f7;
+}
+
+.game-container {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+  }
+  .player {
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.pngfind.com/pngs/m/680-6807590_world-war-ii-the-national-wwii-museum-ww2.png");
+    /* background-color: red; */
+    background-size: 50px 50px;
+    position: relative;
+  }
+  
+  .life {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;  
+    background-image: url("https://thumbs.dreamstime.com/b/heart-icon-sign-symbol-color-website-design-mobile-app-development-simple-element-ui-collection-isolated-black-160920177.jpg");
+    background-size: 30px 30px;
+  }
+
+  .obs{
+    width: 80px;
+    height: 80px;
+    /* border: 1px solid black;   */
+    position: relative;
+    background-image: url("https://www.pinclipart.com/picdir/middle/523-5230738_boom-explosion-png-transparent-explosion-clipart.png");
+    background-size: 80px 80px;
+    border-radius: 50%;
+  }
+
+  .life-container {
+      display: flex;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .resque {
+    width: 50px;
+    height: 50px;
+    background-image: url("https://png.pngtree.com/png-vector/20190215/ourlarge/pngtree-vector-helicopter-icon-png-image_515929.jpg");
+    background-size: 50px 50px;
+    position: relative;
+  }
