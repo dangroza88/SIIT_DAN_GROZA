@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Montserrat&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1527290185615-01925d976a1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+header {
+    border: 5px solid black;
+    display: flex;
+
+}
+h1 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+}
+.img-logo {
+    background-image: url("https://flyclipart.com/thumb2/checklist-document-list-paper-to-do-list-icon-416337.png");
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    border-radius: 25%;
+}
+
+.container {
+    display: flex;
+    flex-basis: 60%;
+    
+}
+
+.todo-stuff {
+    border: 5px solid red;
+    flex-basis: 20%;
+
+}
+
+
+.todo-display {
+    border: 5px solid red;
+    flex-basis: 40%;
+    justify-content: center
+}
