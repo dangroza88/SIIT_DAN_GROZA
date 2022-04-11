@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <div class = "img-logo"></div>
+        <div class="img-logo"></div>
         <h1>My ToDo List</h1>
     </header>
     <section>
         <div class="container">
-            <div class="todo-stuff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, maiores qui libero, accusamus ut fuga eos cumque natus omnis neque saepe nesciunt, reiciendis veniam sequi. Eveniet beatae, dolore vero excepturi hic dicta sint repellendus voluptate quos voluptas voluptatem accusantium consectetur tenetur temporibus maxime. Harum nulla, ducimus debitis ipsa ea laborum, aliquam ipsum porro veniam consectetur qui voluptate labore! Voluptatem labore deleniti dolores officiis. Animi excepturi voluptates optio aperiam cupiditate neque eos incidunt, ad commodi, architecto, exercitationem doloribus? Similique, veritatis cupiditate a neque doloribus ut deleniti eaque quod, provident, deserunt iusto.</div>
-            <div class="todo-display">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio unde earum delectus eligendi. Eveniet ipsam nam commodi deleniti nostrum in, dicta nobis deserunt aliquid dolorem alias veritatis laudantium asperiores blanditiis officiis ea autem neque soluta! Perspiciatis esse dignissimos commodi neque!</div>
+            <div class="todo-stuff">
+                <h2>Add New Task</h2>
+                <!-- <label for="input"> Add Task</label> -->
+                <textarea type="text" , placeholder="  Wish you luck :)  " , id="userInput" , ols="30" rows="5" ,
+                    required></textarea>
+                <button id="btnSave">Save</button>
+
+
+            </div>
+
+            <div class="todo-display">
+
+            </div>
         </div>
     </section>
+    <script src="api.js"></script>
+    <script src="mainDisplay.js"></script>
+    <script src="mainAdd.js"></script>
+    <script src="mainRemove.js"></script>
 </body>
+
 </html>
