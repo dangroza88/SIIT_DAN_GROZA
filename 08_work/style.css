@@ -61,6 +61,7 @@ h1 {
     border: none;
     list-style-type: none;
     font-size: 25px;
+    flex-basis: 70%;
 
 }
 
