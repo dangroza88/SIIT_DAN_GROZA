@@ -2,7 +2,6 @@ import ElementMove from "./move.js"
 export const gameContainer = document.getElementById('game-container')
 
 class Spaceship extends ElementMove {
-    // #spaceshipElement;
 
     constructor() {
         super()
