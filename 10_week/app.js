@@ -1,6 +1,6 @@
 console.log("app loaded")
 import Spaceship from './spaceship.js'
-import Asteroid from './obtacles.js'
+import MrPutin from './obtacles.js'
 import { gameContainer } from "./spaceship.js"
 
 document.getElementById("getShip").addEventListener("click", () => {
@@ -13,9 +13,9 @@ document.getElementById("getShip").addEventListener("click", () => {
 document.getElementById("getObs").addEventListener("click", () => {
     setInterval(function () {
         if (gameContainer.getElementsByTagName('div').length > 0) {
-            obtacles.removeLastChild();
+            mrPutin.removeLastChild();
         }
-        globalThis.obtacles = new Asteroid;
+        globalThis.mrPutin= new MrPutin;
     }, 800);
     const hitBtn = document.getElementById("getObs");
     hitBtn.remove();
@@ -44,11 +44,11 @@ document.addEventListener("keydown", function (eventKeydown) {
     }
 
     const shipPosition = spaceship.element.getBoundingClientRect();
-    const obsPosition = obtacles.element.getBoundingClientRect();
+    const obsPosition = mrPutin.element.getBoundingClientRect();
 
 
     if (shipPosition.top <= obsPosition.bottom && shipPosition.bottom >= obsPosition.top && shipPosition.left <= obsPosition.right && shipPosition.right >= obsPosition.left) {
-        alert("GOT HIM!");
+        alert("Bye Mr Putin!");
         location.reload();
     }
 

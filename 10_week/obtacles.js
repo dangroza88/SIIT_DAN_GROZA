@@ -1,14 +1,14 @@
 import { gameContainer } from "./spaceship.js"
 
 
-class Asteroid {
+class MrPutin {
 
     constructor() {
-        let asteroid = document.createElement("div");
-        asteroid.setAttribute("class", "obs");
-        asteroid.setAttribute("style", "left: " + Math.round(Math.random() * (gameContainer.clientWidth - 30) + 1) + "px; top:" + Math.round(Math.random() * (gameContainer.clientWidth - 30) + 1) + "px;");
-        gameContainer.appendChild(asteroid);
-        this.element = asteroid;
+        let mrPutin = document.createElement("div");
+        mrPutin.setAttribute("class", "obs");
+        mrPutin.setAttribute("style", "left: " + Math.round(Math.random() * (gameContainer.clientWidth - 30) + 1) + "px; top:" + Math.round(Math.random() * (gameContainer.clientWidth - 30) + 1) + "px;");
+        gameContainer.appendChild(mrPutin);
+        this.element = mrPutin;
     }
     removeLastChild() {
         gameContainer.removeChild(gameContainer.lastChild);
@@ -17,4 +17,4 @@ class Asteroid {
 }
 
 
-export default Asteroid;
+export default MrPutin;
