@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: crosshair;
+  }
+
+  .container {
+      display: flex;
+      justify-content: center;
+  }
+
+  .game-container {
+      margin: 50px;
+      border: 2px solid black;
+      width: 800px;
+      height: 800px;
+  }
+
+  .monster {
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+
