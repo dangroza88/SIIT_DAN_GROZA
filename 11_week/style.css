@@ -1,25 +1,38 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    cursor: crosshair;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: crosshair;
+}
 
-  .container {
-      display: flex;
-      justify-content: center;
-  }
+.container {
+  display: flex;
+  justify-content: flex-start:
+}
 
-  .game-container {
-      margin: 50px;
-      border: 2px solid black;
-      width: 800px;
-      height: 800px;
-  }
+.score {
+  margin: 50px;
+  width: auto;
+  height: 20px;
+  border: 2px dotted black;
+  text-align: center;
+  color: brown;
+}
 
-  .monster {
-    width: 30px;
-    height: 30px;
-    position: relative;
-  }
+.game-container {
+  margin: 50px;
+  border: 2px solid black;
+  width: 800px;
+  height: 800px;
+  overflow: hidden;
+}
 
+img::selection {
+  background: transparent;
+}
+
+.monster {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
