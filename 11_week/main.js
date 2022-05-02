@@ -22,14 +22,12 @@ setInterval(function () {
 }, 500);
 
 gamecontainer.addEventListener("click", (e) => {
-    // bloodSpot.style.top = e.pageY + "px";
-    // bloodSpot.style.left = e.pageX + "px";
     //   debugger
-    if (monsterList.some(monsterList => monsterList.element === e.target)) score++;
+    if (monsterList.some(monsterList => monsterList.element === e.target)) 
+    score++;
+    else if(score > 0)
+    score--;
     scoreBox.innerText = "SCORE: " + score;
-    console.log(monsterList);
-    console.log(e.target);
-    console.log("score" + score)
 });
 
 
