@@ -1,8 +1,8 @@
 console.log("1 2 3 ...go!");
 
 import Monster from './MotherMonster.js';
-import { gamecontainer } from './Movement.js';
 
+const gamecontainer = document.querySelector(".game-container");
 const scoreBox = document.querySelector(".score");
 let score = 0;
 
@@ -23,10 +23,12 @@ setInterval(function () {
 
 gamecontainer.addEventListener("click", (e) => {
     //   debugger
-    if (monsterList.some(monsterList => monsterList.element === e.target)) 
-    score++;
-    else if(score > 0)
-    score--;
+    if (monsterList.some(monsterList => monsterList.element === e.target))
+    
+    
+        score++;
+    else if (score > 0)
+        score--;
     scoreBox.innerText = "SCORE: " + score;
 });
 
