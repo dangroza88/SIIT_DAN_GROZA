@@ -19,17 +19,16 @@ setInterval(function () {
         const monster = monsterList[i];
         moveMonster(monster);
     }
-}, 500);
+},  700);
 
 gamecontainer.addEventListener("click", (e) => {
     //   debugger
     if (monsterList.some(monsterList => monsterList.element === e.target))
-    
-    
-        score++;
+        score++
     else if (score > 0)
         score--;
     scoreBox.innerText = "SCORE: " + score;
+    
 });
 
 
