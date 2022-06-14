@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #dddddd;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start:
+}
+
+.score {
+  margin: 50px;
+  width: auto;
+  height: 20px;
+}
+
+.game-container {
+  margin: 50px;
+  border: 2px solid black;
+  width: 800px;
+  height: 800px;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+img::selection {
+  background: transparent;
+}
+
+.monster {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
